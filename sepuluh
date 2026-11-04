@@ -1,1 +1,53 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.arraymultidimensi;
+
+/**
+ *
+ * @author ahmad
+ */
+public class sepuluh {
+    public static void main(String[] args) {
+
+        // Menggunakan String +=
+        long mulaiString = System.nanoTime();
+
+        String hasilString = "";
+
+        for (int i = 1; i <= 100000; i++) {
+            hasilString += i;
+        }
+
+        long selesaiString = System.nanoTime();
+
+        // Menggunakan StringBuilder
+        long mulaiBuilder = System.nanoTime();
+
+        StringBuilder hasilBuilder = new StringBuilder();
+
+        for (int i = 1; i <= 100000; i++) {
+            hasilBuilder.append(i);
+        }
+
+        long selesaiBuilder = System.nanoTime();
+
+        // Menghitung waktu
+        long waktuString = selesaiString - mulaiString;
+        long waktuBuilder = selesaiBuilder - mulaiBuilder;
+
+        System.out.println("Waktu String +=: "
+                + waktuString + " nanodetik");
+
+        System.out.println("Waktu StringBuilder: "
+                + waktuBuilder + " nanodetik");
+
+        System.out.println("Jumlah karakter String: "
+                + hasilString.length());
+
+        System.out.println("Jumlah karakter StringBuilder: "
+                + hasilBuilder.length());
+    }
+}
 
