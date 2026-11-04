@@ -1,1 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.arraymultidimensi;
+import java.util.Scanner;
+/**
+ *
+ * @author ahmad
+ */
+public class delapan {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan kalimat: ");
+        String kalimat = input.nextLine();
+
+        StringBuilder hasil = new StringBuilder();
+
+        for (int i = 0; i < kalimat.length(); i++) {
+            char huruf = kalimat.charAt(i);
+
+            if (!Character.isWhitespace(huruf)) {
+                hasil.append(huruf);
+            }
+        }
+
+        System.out.println("Hasil: " + hasil);
+    }
+}
 
