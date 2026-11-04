@@ -1,1 +1,28 @@
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.arraymultidimensi;
+import java.util.Scanner;
+/**
+ *
+ * @author ahmad
+ */
+public class lima {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan kalimat: ");
+        String kalimat = input.nextLine().trim();
+
+        int jumlah = 0;
+
+        if (!kalimat.isEmpty()) {
+            String[] kata = kalimat.split("\\s+");
+            jumlah = kata.length;
+        }
+
+        System.out.println("Jumlah kata: " + jumlah);
+    }
+}
