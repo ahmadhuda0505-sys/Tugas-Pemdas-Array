@@ -1,1 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.arraymultidimensi;
+
+/**
+ *
+ * @author ahmad
+ */
+public class Satu {
+
+    public static void main(String[] args) {
+        int[][] nilai = {
+            {80, 85, 90, 75},
+            {70, 80, 85, 90},
+            {90, 95, 80, 85}
+        };
+
+        for (int i = 0; i < nilai.length; i++) {
+            int total = 0;
+
+            for (int j = 0; j < nilai[i].length; j++) {
+                total += nilai[i][j];
+            }
+
+            double rataRata = (double) total / nilai[i].length;
+
+            System.out.println("Mahasiswa " + (i + 1)
+                    + " rata-rata: " + rataRata);
+        }
+    }
+}
 
